@@ -15,3 +15,17 @@ function isAuthenticated(user, token) {
   return token === correctToken;
 }
 ```
+
+### Patched Code
+```
+var mismatch = 0;
+  for (var i = 0; i < a.length; ++i) {
+  mismatch |= (a.charCodeAt(i) ^ b.charCodeAt(i));
+}
+return mismatch;
+```
+
+### Exploit Code
+```
+// ...
+```

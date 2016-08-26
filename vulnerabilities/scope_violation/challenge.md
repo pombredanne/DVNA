@@ -22,3 +22,13 @@ var i = 0;
   console.log(determineGlobalVariable());
 })
 ```
+
+### Patched Code
+```
+// ...
+```
+
+### Exploit Code
+```
+// ...
+```

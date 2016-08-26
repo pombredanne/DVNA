@@ -1,5 +1,5 @@
 ## Hints
-Additional resources on XSS:
+Additional resources on XSS
 * https://www.veracode.com/security/xss
 * http://www.veracode.com/blog/2012/07/what-is-cross-site-scripting/
 * http://www.veracode.com/blog/2012/06/building-secure-web-applications-infographic/

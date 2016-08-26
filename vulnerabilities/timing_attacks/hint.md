@@ -13,12 +13,3 @@ Read "Using Node.js Event Loop for Timing Attacks" by the pasten CTF crew [1]. T
 * https://www.npmjs.com/package/secure-compare
 * https://www.npmjs.com/package/scmp
 * https://www.npmjs.com/package/buffer-equal-constant-time
-
-## Secure Code View
-'''
-var mismatch = 0;
-  for (var i = 0; i < a.length; ++i) {
-  mismatch |= (a.charCodeAt(i) ^ b.charCodeAt(i));
-}
-return mismatch;
-'''

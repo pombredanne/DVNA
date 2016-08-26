@@ -39,3 +39,13 @@ var start = process.hrtime();
 console.log(validateInputFormat(input));
 console.log(process.hrtime(start));
 ```
+
+### Patched Code
+```
+// ...
+```
+
+### Exploit Code
+```
+// ...
+```
