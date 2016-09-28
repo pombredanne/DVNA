@@ -48,3 +48,12 @@ if (!isAuthorized()){
 };
 
 ```
+### Patched Code
+```
+// ...
+```
+
+### Exploit Code
+```
+// ...
+```

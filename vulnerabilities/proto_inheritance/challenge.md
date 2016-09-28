@@ -30,3 +30,13 @@ protoCustomOverride.a();
 protoCustom.a();
 
 ```
+
+### Patched Code
+```
+// ...
+```
+
+### Exploit Code
+```
+// ...
+```

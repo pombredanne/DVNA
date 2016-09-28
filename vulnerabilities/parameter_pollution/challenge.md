@@ -15,6 +15,10 @@ Some web technologies parse the first or the last occurrence of the parameter, s
 
 Client-side HPP can be used to inject additional parameters to the URL links or other src attributes. Stored HPP can manipulate all tags with data, src, or href attributes and POST action forms.
 
+**Prevent HPP and stop possible Uncaught Exceptions**
+
+- RFC3986 does not define a standard for handling multiple parameters. Most frameworks treat values with the same name as an array. Express treats a single name by returning a String, when multiple values with the same name are passed the type is changed to Array. If you don't account for this in query handling, an application will emit an UncaughtException even that can bring the application down resulting in a denial of service if not properly handled.
+
 ### Defenses
 - Implement an extensive and proper input validation scheme. This is going to vary by language and stack.
 - Pay attention to how the framework you are using handles parameter triggering
@@ -22,5 +26,27 @@ Client-side HPP can be used to inject additional parameters to the URL links or 
 
 ### Vulnerable Code View
 ```
-// TODO
+// Express expects the name key to be a String and uses .toUpperCase() on it
+// the code assumes that req.query.name is a String but since there are two arguments 
+// with the same name it returns the result as an Array:['node','node']. This will
+// throw an Error and crash the application.
+
+app.get('/endpoint', function(req, res){  
+  if(req.query.name){
+    res.status(200).send('Hi ' + req.query.name.toUpperCase())
+  } else {
+    res.status(200).send('Hi');
+  }
+});
+
+```
+
+### Patched Code
+```
+// ...
+```
+
+### Exploit Code
+```
+curl http://example.com:8080/endpoint?name=DVNA&name=DVNA
 ```

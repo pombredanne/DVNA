@@ -1,6 +1,5 @@
 ## Hints
 Read "Using Node.js Event Loop for Timing Attacks" by the pasten CTF crew [1]. There's also a YouTube video by Phillip Roberts [2] discussing what Event Loop is. Additional resources by Willson Mock [3], Erin Sweson-Healey [4], Trevor Norris [5], and the Mozilla Developer Network [6].
-
 * [1] https://snyk.io/blog/node-js-timing-attack-ccc-ctf/
 * [2] https://www.youtube.com/watch?v=8aGhZQkoFbQ
 * [3] http://altitudelabs.com/blog/what-is-the-javascript-event-loop/
